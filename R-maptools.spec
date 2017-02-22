@@ -4,9 +4,9 @@
 #
 Name     : R-maptools
 Version  : 0.8
-Release  : 3
-URL      : https://cran.r-project.org/src/contrib/maptools_0.8-39.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/maptools_0.8-39.tar.gz
+Release  : 4
+URL      : https://cran.r-project.org/src/contrib/maptools_0.8-41.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/maptools_0.8-41.tar.gz
 Summary  : Tools for Reading and Handling Spatial Objects
 Group    : Development/Tools
 License  : GPL-2.0+
@@ -31,9 +31,12 @@ lib components for the R-maptools package.
 %setup -q -c -n maptools
 
 %build
+export LANG=C
+export SOURCE_DATE_EPOCH=1487768785
 
 %install
 rm -rf %{buildroot}
+export SOURCE_DATE_EPOCH=1487768785
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -43,7 +46,7 @@ export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
-R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library maptools
+R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library maptools
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
 export LANG=C
