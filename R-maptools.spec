@@ -4,7 +4,7 @@
 #
 Name     : R-maptools
 Version  : 0.8
-Release  : 4
+Release  : 5
 URL      : https://cran.r-project.org/src/contrib/maptools_0.8-41.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/maptools_0.8-41.tar.gz
 Summary  : Tools for Reading and Handling Spatial Objects
@@ -32,11 +32,11 @@ lib components for the R-maptools package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487768785
+export SOURCE_DATE_EPOCH=1487946077
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1487768785
+export SOURCE_DATE_EPOCH=1487946077
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
