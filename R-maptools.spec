@@ -4,7 +4,7 @@
 #
 Name     : R-maptools
 Version  : 0.9.2
-Release  : 11
+Release  : 12
 URL      : https://cran.r-project.org/src/contrib/maptools_0.9-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/maptools_0.9-2.tar.gz
 Summary  : Tools for Reading and Handling Spatial Objects
@@ -31,12 +31,15 @@ lib components for the R-maptools package.
 %setup -q -c -n maptools
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1490544972
+export SOURCE_DATE_EPOCH=1492801085
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1490544972
+export SOURCE_DATE_EPOCH=1492801085
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -52,7 +55,7 @@ R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library maptools || :
 
@@ -64,6 +67,7 @@ R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/lib
 /usr/lib64/R/library/maptools/INDEX
 /usr/lib64/R/library/maptools/Meta/Rd.rds
 /usr/lib64/R/library/maptools/Meta/data.rds
+/usr/lib64/R/library/maptools/Meta/features.rds
 /usr/lib64/R/library/maptools/Meta/hsearch.rds
 /usr/lib64/R/library/maptools/Meta/links.rds
 /usr/lib64/R/library/maptools/Meta/nsInfo.rds
