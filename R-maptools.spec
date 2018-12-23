@@ -4,7 +4,7 @@
 #
 Name     : R-maptools
 Version  : 0.9.4
-Release  : 37
+Release  : 38
 URL      : https://cran.r-project.org/src/contrib/maptools_0.9-4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/maptools_0.9-4.tar.gz
 Summary  : Tools for Handling Spatial Objects
