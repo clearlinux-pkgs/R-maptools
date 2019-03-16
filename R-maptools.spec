@@ -4,14 +4,13 @@
 #
 Name     : R-maptools
 Version  : 0.9.5
-Release  : 41
+Release  : 42
 URL      : https://cran.r-project.org/src/contrib/maptools_0.9-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/maptools_0.9-5.tar.gz
 Summary  : Tools for Reading and Handling Spatial Objects
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-maptools-lib = %{version}-%{release}
-Requires: R-sp
 BuildRequires : R-sp
 BuildRequires : buildreq-R
 
@@ -35,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550502006
+export SOURCE_DATE_EPOCH=1552773498
 
 %install
-export SOURCE_DATE_EPOCH=1550502006
+export SOURCE_DATE_EPOCH=1552773498
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -74,8 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library maptools|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  maptools || :
 
 
 %files
@@ -114,7 +112,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/maptools/help/paths.rds
 /usr/lib64/R/library/maptools/html/00Index.html
 /usr/lib64/R/library/maptools/html/R.css
-/usr/lib64/R/library/maptools/libs/symbols.rds
 /usr/lib64/R/library/maptools/shapes/Testing.kml
 /usr/lib64/R/library/maptools/shapes/baltim.dbf
 /usr/lib64/R/library/maptools/shapes/baltim.shp
