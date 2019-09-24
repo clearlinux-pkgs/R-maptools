@@ -1,4 +1,7 @@
 # This file contains recursive sources that require this package
+R-TSP
+R-car
 R-maps
 R-rgeos
 R-sp
+R-spdep
