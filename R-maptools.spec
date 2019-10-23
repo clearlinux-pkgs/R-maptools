@@ -4,7 +4,7 @@
 #
 Name     : R-maptools
 Version  : 0.9.8
-Release  : 49
+Release  : 50
 URL      : https://cran.r-project.org/src/contrib/maptools_0.9-8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/maptools_0.9-8.tar.gz
 Summary  : Tools for Reading and Handling Spatial Objects
@@ -14,6 +14,7 @@ Requires: R-maptools-lib = %{version}-%{release}
 Requires: R-sp
 BuildRequires : R-sp
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 This file is intended to clarify ownership and copyright: where
@@ -35,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570382371
+export SOURCE_DATE_EPOCH=1571860451
 
 %install
-export SOURCE_DATE_EPOCH=1570382371
+export SOURCE_DATE_EPOCH=1571860451
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

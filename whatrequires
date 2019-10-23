@@ -2,6 +2,7 @@
 R-TSP
 R-car
 R-maps
+R-rgdal
 R-rgeos
 R-sp
 R-spdep
