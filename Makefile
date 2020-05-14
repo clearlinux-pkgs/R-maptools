@@ -1,5 +1,5 @@
 PKG_NAME := R-maptools
-URL = https://cran.r-project.org/src/contrib/maptools_0.9-9.tar.gz
+URL = https://cran.r-project.org/src/contrib/maptools_1.0-1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
