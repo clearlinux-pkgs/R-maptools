@@ -4,7 +4,7 @@
 #
 Name     : R-maptools
 Version  : 1.1.5
-Release  : 79
+Release  : 80
 URL      : https://cran.r-project.org/src/contrib/maptools_1.1-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/maptools_1.1-5.tar.gz
 Summary  : Tools for Handling Spatial Objects
